@@ -1,4 +1,4 @@
-import os, re
+import os, re, json
 
 class Report:
 
@@ -44,9 +44,9 @@ class Report:
         self.csreport()
         self.makereport()
         error = (len(re.findall('\n', self.csreportlog)) - 2) / 2
-        Report.append({'CodingStyle Error': str((error - 2) / 2)})
-        Report.append({'Compilation Report': self.makereport})
-        json.
+        Report.append({'CodingStyle Error': str(int((error - 2) / 2))})
+        Report.append({'Compilation Report': self.makereportlog})
+        json.dump(Report, self.ccreportfile)
 
     def destroy(self):
         pass #fermeture de tout les fichiers
