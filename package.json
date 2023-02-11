@@ -1,0 +1,19 @@
+{
+  "name": "epitester",
+  "version": "1.0.0",
+  "description": "Epitech Projects Tester",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PoC-Community/software-pool-rush-47h42.git"
+  },
+  "author": "47h42",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PoC-Community/software-pool-rush-47h42/issues"
+  },
+  "homepage": "https://github.com/PoC-Community/software-pool-rush-47h42#readme"
+}
