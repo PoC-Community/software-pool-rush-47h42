@@ -10,14 +10,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Report {
-  id          String @id @default(uuid()) @unique
-  percentage  Float
-  trace       Json
-  ownerId     String
-  owner       User @relation(fields: [ownerId], references: [id], onDelete: Cascade)
-}
-
 model Test {
   id        String @id @default(uuid()) @unique
   name      String
@@ -32,9 +24,18 @@ model Project {
   tests   Test[]
 }
 
+model Report {
+  id          String @id @default(uuid()) @unique
+  percentage  Float
+  trace       Json
+  ownerId     String
+  owner       User @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+}
+
 model User {
-  id      String @id @default(uuid()) @unique
-  name    String
-  email   String @unique
+  id        String @id @default(uuid()) @unique
+  name      String
+  email     String @unique
+  password  String
   reports Report[]
 }
