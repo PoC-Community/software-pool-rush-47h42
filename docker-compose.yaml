@@ -9,14 +9,14 @@ services:
   #  env_file:
   #    - ./src/BackEnd/.env
 
-  #frontend:
-  #  build: ./src/FrontEnd
-  #  ports:
-  #  - 3000:3000
-  #  networks:
-  #    - back
-  #  env_file:
-  #    - ./src/FrontEnd/.env
+  frontend:
+    build: ./src/FrontEnd
+    ports:
+      - 3000:3000
+    networks:
+      - back
+    env_file:
+      - ./src/FrontEnd/.env
 
   database:
     image: postgres
@@ -25,7 +25,7 @@ services:
     ports:
       - 5432:5432
     env_file:
-      - ./database/.env
+      - .env
     networks:
       - back
 

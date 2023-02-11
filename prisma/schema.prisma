@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = env("DB_URL")
 }
 
 model Test {
@@ -26,8 +26,10 @@ model Project {
 
 model Report {
   id          String @id @default(uuid()) @unique
+  date        DateTime
   percentage  Float
-  trace       Json
+  traceCC     Json
+  traceTests  Json
   ownerId     String
   owner       User @relation(fields: [ownerId], references: [id], onDelete: Cascade)
 }
@@ -37,5 +39,5 @@ model User {
   name      String
   email     String @unique
   password  String
-  reports Report[]
+  reports   Report[]
 }

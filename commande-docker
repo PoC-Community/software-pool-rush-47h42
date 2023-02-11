@@ -1,0 +1,4 @@
+docker compose up
+docker compose down
+docker system prune -y
+sudo pkill -u postgres
