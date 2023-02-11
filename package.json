@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/PoC-Community/software-pool-rush-47h42/issues"
   },
-  "homepage": "https://github.com/PoC-Community/software-pool-rush-47h42#readme"
+  "homepage": "https://github.com/PoC-Community/software-pool-rush-47h42#readme",
+  "devDependencies": {
+    "prisma": "^4.10.1"
+  }
 }
