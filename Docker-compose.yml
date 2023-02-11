@@ -1,0 +1,36 @@
+version: '3'
+services:
+  #backend:
+  #  build: ./src/BackEnd
+  #  ports:
+  #    - 8080:8080
+  #  networks:
+  #    - back
+  #  env_file:
+  #    - ./src/BackEnd/.env
+#
+  #frontend:
+  #  build: ./src/FrontEnd
+  #  ports:
+  #  - 3000:3000
+  #  networks:
+  #    - back
+  #  env_file:
+  #    - ./src/FrontEnd/.env
+
+  database:
+    image: postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data/
+    ports:
+      - 5432:5432
+    env_file:
+      - ./database/.env
+    networks:
+      - back
+
+volumes:
+  db-data:
+
+networks:
+  back:

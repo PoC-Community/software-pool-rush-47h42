@@ -1,0 +1,5 @@
+Suffix files with :
+
+<file tested>.tests.ts
+
+are a standard way to name your unit tests.

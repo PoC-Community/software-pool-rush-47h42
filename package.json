@@ -4,7 +4,8 @@
   "description": "Epitech Projects Tester",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest tests/ --env=node",
+    "test:cov": "jest tests/ --env=node --coverage"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,15 @@
   },
   "homepage": "https://github.com/PoC-Community/software-pool-rush-47h42#readme",
   "devDependencies": {
+    "@types/jest": "^29.4.0",
     "@types/node": "^18.13.0",
+    "@types/prompts": "^2.4.2",
+    "jest": "^29.4.2",
+    "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "prompts": "^2.4.2"
   }
 }
